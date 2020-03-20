@@ -51,10 +51,6 @@ public class HeavenlyBody {
 
     }
 
-    public HeavenlyBody getSpecificOne(String name) {
-        return solarSystem.get(name);
-    }
-
     public boolean addSatellite(HeavenlyBody HBO){
         if (this.getBodyType().equals("PLANET")) {
             if (HBO.getBodyType().equals("MOON")) {
@@ -144,8 +140,7 @@ public class HeavenlyBody {
     @Override
     public int hashCode() {
 //        System.out.println("hashCode() used");
-        int result = this.name.hashCode() + 57;
 //        System.out.println("The hashcode is: " + result);
-        return result;
+        return this.name.hashCode() + 57;
     }
 }
